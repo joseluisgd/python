@@ -1,3 +1,8 @@
+#Antes de correr el programa instalar:
+#sudo -H pip install -U scikit-learn
+#sudo -H pip install numpy
+#sudo -H pip install scipy
+
 #Este primer ejemplo determinara por las medidas que se le brinden
 #El genero de la persona.
 from sklearn import tree  #Con esto importamos "Decision tree"
@@ -9,6 +14,7 @@ x = [[181,80,40], [177,70,43], [160,60,38], [154,54,37],
 y = ["male","female","female","female","male","male","male",
 "female","male","female","male"]
 #Llamamos metdo de clasficacion del objeto tree y lo guardamos en una variable
+#Este paso se llama: Entrenando al modelo.
 clf = tree.DecisionTreeClassifier()
 #Llenamos el arbol con las variables previamente declaradas
 clf = clf.fit(x,y)
